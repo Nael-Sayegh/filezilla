@@ -1,0 +1,118 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 'filezilla' '2023.06.15'\n"
+"Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
+"POT-Creation-Date: 2023-10-03 11:38+0200\n"
+"PO-Revision-Date: 2023-10-03 11:41+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.3.2\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: addon\globalPlugins\update_filezilla.py:31
+#, python-format
+msgid "Update of %s version %s"
+msgstr "Mise à jour de %s version %s"
+
+#: addon\globalPlugins\update_filezilla.py:32
+#, python-format
+msgid ""
+"%s version %s is available. Would you like to update now? You can see the "
+"new features by clicking on the help button in the add-on manager."
+msgstr ""
+"%s version %s est disponible. Souhaitez-vous mettre à jour maintenant? Vous "
+"pourrez voir les nouveautées en cliquant sur le bouton aide dans le "
+"gestionnaire d'extension."
+
+#: addon\globalPlugins\update_filezilla.py:74
+msgid "No update is available."
+msgstr "Aucune mise à jour n'est disponible."
+
+#: addon\globalPlugins\update_filezilla.py:79
+#, python-format
+msgid "%s is enabled."
+msgstr "%s est activée."
+
+#: addon\globalPlugins\update_filezilla.py:82
+#, python-format
+msgid "%s is disabled."
+msgstr "%s est désactivée."
+
+#: addon\globalPlugins\update_filezilla.py:88
+msgid "FileZilla: checks for module updates manually"
+msgstr "FileZilla: rechercher une mise à jour du module manuellement"
+
+#: addon\globalPlugins\update_filezilla.py:92
+msgid "FileZilla: enable/disable automatic update checking"
+msgstr "FileZilla: active/désactive la recherche de mise à jour automatique."
+
+#: addon\globalPlugins\update_filezilla.py:94
+msgid "Automatic update"
+msgstr "La mise à jour automatique"
+
+#: addon\appModules\filezilla.py:16
+msgid ""
+"FileZilla: Switch between local and remote file lists; when not in a list, "
+"navigate to the remote file list."
+msgstr ""
+"FileZilla: Alterne entre la liste des fichiers distans et locaux; quand on "
+"est sur aucune liste, amène sur la liste des fichiers distants"
+
+#: addon\appModules\filezilla.py:28
+msgid "FileZilla: go to the connections history button"
+msgstr "Filezilla: Se place sur le bouton historique des connexions"
+
+#: addon\appModules\filezilla.py:42
+msgid "Connection history"
+msgstr "Historique des connexions"
+
+#: addon\appModules\filezilla.py:44
+msgid "Search options"
+msgstr "Options de recherche"
+
+#: addon\appModules\filezilla.py:46
+msgid "Close the search."
+msgstr "Fermer la recherche"
+
+#: addon\appModules\filezilla.py:74
+msgid "Not found {nb}"
+msgstr "Pas trouvé {nb}"
+
+#: addon\appModules\filezilla.py:138
+msgid "The list of remote files cannot be found"
+msgstr "La liste des fichiers distants est introuvable."
+
+#: addon\appModules\filezilla.py:159
+msgid "The list of remote files cannot be found."
+msgstr "La liste des fichiers distants est introuvable."
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+#: buildVars.py:26
+msgid ""
+"This module improves the FileZilla software by adding shortcuts and labels "
+"to unnamed buttons."
+msgstr ""
+"Ce module apporte des améliorations à Filezilla en ajoutant des raccourcis "
+"et des libellés aux boutons sans nom."
+
+#~ msgid "FileZilla: go to the remote files list"
+#~ msgstr "FileZilla: Se place sur la liste des fichiers distants"
+
+#~ msgid "FileZilla: Go to the remote files list from the local files list"
+#~ msgstr ""
+#~ "FileZilla: Se place sur la liste des fichiers distants depuis la liste "
+#~ "des fichiers locaux"
+
+#~ msgid "FileZilla: Go to the local files list"
+#~ msgstr "FileZilla: Se place sur la liste des fichiers locaux"
