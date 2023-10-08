@@ -52,9 +52,16 @@ class AppModule(appModuleHandler.AppModule):
 class StatusText(IAccessible):
 	@scriptHandler.script(gesture="kb:tab")
 	def script_nextAfterText(self, gesture):
-		log.info("touche tab appuyé")
 		obj=api.getNavigatorObject()
-		obj.simplePrevious.simplePrevious.simplePrevious.simplePrevious.simplePrevious.simplePrevious.setFocus()
+		obj=obj.parent.parent.parent.previous
+		if obj.role == controlTypes.Role.WINDOW and obj.windowClassName == 'wxWindowNR' and obj.windowControlID == -31827:
+			obj=obj.firstChild.firstChild.next
+		if obj.role == controlTypes.Role.WINDOW and obj.windowControlID == -31818:
+			obj=obj.firstChild.firstChild.firstChild.firstChild.firstChild.firstChild.firstChild.firstChild.next
+		if obj.role == controlTypes.Role.WINDOW and obj.windowControlID == -31790:
+			obj=obj.firstChild.firstChild.firstChild.firstChild.firstChild
+		if obj.role == controlTypes.Role.EDITABLETEXT and obj.windowClassName == 'Edit' and obj.windowControlID == 1001:
+			obj.setFocus()
 	
 	@scriptHandler.script(gesture="kb:shift+tab")
 	def script_previousText(self, gesture):

@@ -28,6 +28,9 @@ This module adds the following labels in the software
 
 ## Changes
 
+### Version 2023.10.08
+  * Fixed the tab shortcut to exit the connection status area, which was not always working.
+
 ### Version 2023.10.03
   * Added support for FileZilla 3.65 while maintaining compatibility with previous versions
   * Modified keyboard shortcut, now when you are on one of the file lists, you can use ctrl+f6 to switch between lists. When not on any list, the shortcut takes you to the remote file list
@@ -46,6 +49,6 @@ Copyright ©: 2023 (Nael Sayegh and Nael-Accessvision)
 
 <!-- links section -->
 
-[1]: https://github.com/nael-sayegh/filezilla/releases/download/v2023.06.19/filezilla-2023.10.03.nvda-addon
+[1]: https://github.com/nael-sayegh/filezilla/releases/download/2023.10.08/filezilla-2023.10.08.nvda-addon
 
 [2]: https://github.com/nael-sayegh/filezilla

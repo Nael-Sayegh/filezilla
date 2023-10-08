@@ -29,6 +29,9 @@ Ce module apporte les labels suivants dans le logiciel
   
 ## Changements
 
+### Version 2023.10.08
+  * Correction du raccourci tab pour sortir de la zone de statu de la connexion qui ne fonctionnait pas toujours
+
 ### Version 2023.10.03
   * Ajout de la prise en charge de FileZilla 3.65 en gardant la compatibillité avec les versions antérieurs
   * Modifications de raccourci clavier, maintenant, quand vous êtes sur l'une des listes de fichiers, vous pouvez faire ctrl+f6 pour basculer d'une liste à l'autre. Lorsque vous n'êtes sur aucune liste, le raccourci amène sur la liste des fichiers distants
@@ -47,7 +50,7 @@ Copyright ©: 2023 (Nael Sayegh et Nael-Accessvision)
 
 <!-- links section -->
 
-[1]: https://github.com/nael-sayegh/filezilla/releases/download/v2023.06.19/filezilla-2023.10.03.nvda-addon
+[1]: https://github.com/nael-sayegh/filezilla/releases/download/2023.10.08/filezilla-2023.10.08.nvda-addon
 
 [2]: https://github.com/nael-sayegh/filezilla
 
