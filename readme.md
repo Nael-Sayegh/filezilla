@@ -28,6 +28,10 @@ This module adds the following labels in the software
 
 ## Changes
 
+### Version 2023.12.22
+
+  * Adding compatibility with NVDA 2024.1
+
 ### Version 2023.10.08
   * Fixed the tab shortcut to exit the connection status area, which was not always working.
 
@@ -49,6 +53,6 @@ Copyright ©: 2023 (Nael Sayegh and Nael-Accessvision)
 
 <!-- links section -->
 
-[1]: https://github.com/nael-sayegh/filezilla/releases/download/2023.10.08/filezilla-2023.10.08.nvda-addon
+[1]: https://github.com/nael-sayegh/filezilla/releases/download/2023.12.22/filezilla-2023.12.22.nvda-addon
 
 [2]: https://github.com/nael-sayegh/filezilla
