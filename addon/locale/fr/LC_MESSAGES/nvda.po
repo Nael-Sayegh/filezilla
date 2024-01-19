@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 'filezilla' '2023.06.15'\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2023-10-03 11:38+0200\n"
-"PO-Revision-Date: 2023-10-03 11:41+0200\n"
+"POT-Creation-Date: 2024-01-07 16:19+0100\n"
+"PO-Revision-Date: 2024-01-07 16:20+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -19,46 +19,60 @@ msgstr ""
 "X-Generator: Poedit 3.3.2\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
-#: addon\globalPlugins\update_filezilla.py:31
+#: addon\globalPlugins\update_filezilla.py:30
 #, python-format
 msgid "Update of %s version %s"
 msgstr "Mise à jour de %s version %s"
 
-#: addon\globalPlugins\update_filezilla.py:32
+#: addon\globalPlugins\update_filezilla.py:31
 #, python-format
 msgid ""
-"%s version %s is available. Would you like to update now? You can see the "
-"new features by clicking on the help button in the add-on manager."
+"%s version %s is available. Would you like to update now? You can view the "
+"changes by clicking on the What's New button and scrolling down to Changes."
 msgstr ""
 "%s version %s est disponible. Souhaitez-vous mettre à jour maintenant? Vous "
-"pourrez voir les nouveautées en cliquant sur le bouton aide dans le "
-"gestionnaire d'extension."
+"pouvez voir les changements en cliquant sur le bouton quoi de neuf et "
+"descendre jusqu'à changement."
 
-#: addon\globalPlugins\update_filezilla.py:74
+#: addon\globalPlugins\update_filezilla.py:69
 msgid "No update is available."
 msgstr "Aucune mise à jour n'est disponible."
 
-#: addon\globalPlugins\update_filezilla.py:79
+#: addon\globalPlugins\update_filezilla.py:74
 #, python-format
 msgid "%s is enabled."
 msgstr "%s est activée."
 
-#: addon\globalPlugins\update_filezilla.py:82
+#: addon\globalPlugins\update_filezilla.py:77
 #, python-format
 msgid "%s is disabled."
 msgstr "%s est désactivée."
 
-#: addon\globalPlugins\update_filezilla.py:88
+#: addon\globalPlugins\update_filezilla.py:83
 msgid "FileZilla: checks for module updates manually"
 msgstr "FileZilla: rechercher une mise à jour du module manuellement"
 
-#: addon\globalPlugins\update_filezilla.py:92
+#: addon\globalPlugins\update_filezilla.py:87
 msgid "FileZilla: enable/disable automatic update checking"
 msgstr "FileZilla: active/désactive la recherche de mise à jour automatique."
 
-#: addon\globalPlugins\update_filezilla.py:94
+#: addon\globalPlugins\update_filezilla.py:89
 msgid "Automatic update"
 msgstr "La mise à jour automatique"
+
+#. Translators: This is a label of a button appearing
+#: addon\globalPlugins\update_filezilla.py:101
+msgid "&Yes"
+msgstr "&Oui"
+
+#. Translators: This is a label of a button appearing
+#: addon\globalPlugins\update_filezilla.py:105
+msgid "&No"
+msgstr "&Non"
+
+#: addon\globalPlugins\update_filezilla.py:107
+msgid "Wha&t's new"
+msgstr "&Quoi de neuf"
 
 #: addon\appModules\filezilla.py:16
 msgid ""
@@ -84,15 +98,15 @@ msgstr "Options de recherche"
 msgid "Close the search."
 msgstr "Fermer la recherche"
 
-#: addon\appModules\filezilla.py:74
+#: addon\appModules\filezilla.py:81
 msgid "Not found {nb}"
 msgstr "Pas trouvé {nb}"
 
-#: addon\appModules\filezilla.py:138
+#: addon\appModules\filezilla.py:145
 msgid "The list of remote files cannot be found"
 msgstr "La liste des fichiers distants est introuvable."
 
-#: addon\appModules\filezilla.py:159
+#: addon\appModules\filezilla.py:166
 msgid "The list of remote files cannot be found."
 msgstr "La liste des fichiers distants est introuvable."
 

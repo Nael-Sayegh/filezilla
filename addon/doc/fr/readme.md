@@ -29,6 +29,10 @@ Ce module apporte les labels suivants dans le logiciel
   
 ## Changements
 
+### Version 2024.01.20
+
+  * Ajout d'un bouton "Quoi de neuf" dans le dialogue de mise à jour pour voir les nouvelles fonctionalitées avant de faire la mise à jour
+
 ### Version 2023.10.08
   * Correction du raccourci tab pour sortir de la zone de statu de la connexion qui ne fonctionnait pas toujours
 
@@ -50,7 +54,7 @@ Copyright ©: 2023 (Nael Sayegh et Nael-Accessvision)
 
 <!-- links section -->
 
-[1]: https://github.com/nael-sayegh/filezilla/releases/download/2023.12.22/filezilla-2023.12.22.nvda-addon
+[1]: https://github.com/nael-sayegh/filezilla/releases/download/2023.12.22/filezilla-2024.01.20.nvda-addon
 
 [2]: https://github.com/nael-sayegh/filezilla
 
