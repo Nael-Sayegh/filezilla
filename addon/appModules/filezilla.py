@@ -27,16 +27,13 @@ class AppModule(appModuleHandler.AppModule):
 	
 	@scriptHandler.script(gesture="kb:control+shift+h",description=_("FileZilla: go to the connections history button"),category="FileZilla")
 	def script_clickHistory(self, gesture):
-		#Je récupère l'objet en avant plan
 		fg = api.getForegroundObject()
-		#Je parcours l'arborescence des objets pour arriver à la liste.
 		o = getChildByID(fg, ID = -31832, nb=1)
 		o = getChildByID(o, ID = -31832, nb=2)
 		o = getChildByID(o, ID = -31943, nb=3)
 		o = getChildByID(o, ID = -31943, nb=4)
 		o.setFocus()
 	
-		#Définition du label du bouton de l'historique de connexion en "Historique des connexions"
 	def event_NVDAObject_init(self, obj):
 		if obj.role == controlTypes.Role.BUTTON and obj.windowControlID == -31943:
 			obj.name = _("Connection history")
@@ -65,9 +62,7 @@ class StatusText(IAccessible):
 	
 	@scriptHandler.script(gesture="kb:shift+tab")
 	def script_previousText(self, gesture):
-		#Je récupère l'objet en avant plan
 		fg = api.getForegroundObject()
-		#Je parcours l'arborescence des objets pour arriver à la liste.
 		o = getChildByID(fg, ID = -31832, nb=1)
 		o = getChildByID(o, ID = -31832, nb=2)
 		o = getChildByID(o, ID = -31943, nb=3)
@@ -87,40 +82,42 @@ def getChildByID(o, ID, nb):
 
 def goLocalList():
 	fg=api.getForegroundObject()
-	if int(globalVars.foregroundObject.appModule.productVersion.split(",")[1]) < 65:
-		o = getChildByID(fg, ID = -31828, nb=1)
-		o = getChildByID(o, ID = -31828, nb=2)
-		o = getChildByID(o, ID = -31827, nb=3)
-		o = getChildByID(o, ID = -31827, nb=4)
-		o = getChildByID(o, ID = -31817, nb=5)
-		o = getChildByID(o, ID = -31817, nb=6)
-		o = getChildByID(o, ID = -31816, nb=7)
-		o = getChildByID(o, ID = -31816, nb=8)
-		o = getChildByID(o, ID = -31815, nb=9)
-		o = getChildByID(o, ID = -31815, nb=10)
-		o = getChildByID(o, ID = -31812, nb=11)
-		o = getChildByID(o, ID = -31812, nb=12)
-		o = getChildByID(o, ID = -31810, nb=13)
-		o = getChildByID(o, ID = -31810, nb=14)
-		#Je vérifie si l'objet dans la liste qui indique que l'on est pas connecté est là
-		o.setFocus()
-	else:
-		fg = api.getForegroundObject()
-		o = getChildByID(fg, ID=-31828, nb=1)
-		o = getChildByID(o, ID=-31828, nb=2)
-		o=getChildByID(o, ID=-31827, nb=3)
-		o=getChildByID(o, ID=-31827, nb=4)
-		o=getChildByID(o, ID=-31818, nb=5)
-		o=getChildByID(o, ID=-31818, nb=6)
-		o=getChildByID(o, ID=-31817, nb=7)
-		o=getChildByID(o, ID=-31817, nb=8)
-		o=getChildByID(o, ID=-31816, nb=9)
-		o=getChildByID(o, ID=-31816, nb=10)
-		o=getChildByID(o, ID=-31813, nb=11)
-		o=getChildByID(o, ID=-31813, nb=12)
-		o=getChildByID(o, ID=-31811, nb=13)
-		o=getChildByID(o, ID=-31811, nb=14) 
-		o.setFocus()
+	try:
+		if int(globalVars.foregroundObject.appModule.productVersion.split(",")[1]) < 65:
+			o = getChildByID(fg, ID = -31828, nb=1)
+			o = getChildByID(o, ID = -31828, nb=2)
+			o = getChildByID(o, ID = -31827, nb=3)
+			o = getChildByID(o, ID = -31827, nb=4)
+			o = getChildByID(o, ID = -31817, nb=5)
+			o = getChildByID(o, ID = -31817, nb=6)
+			o = getChildByID(o, ID = -31816, nb=7)
+			o = getChildByID(o, ID = -31816, nb=8)
+			o = getChildByID(o, ID = -31815, nb=9)
+			o = getChildByID(o, ID = -31815, nb=10)
+			o = getChildByID(o, ID = -31812, nb=11)
+			o = getChildByID(o, ID = -31812, nb=12)
+			o = getChildByID(o, ID = -31810, nb=13)
+			o = getChildByID(o, ID = -31810, nb=14)
+			o.setFocus()
+		else:
+			fg = api.getForegroundObject()
+			o = getChildByID(fg, ID=-31828, nb=1)
+			o = getChildByID(o, ID=-31828, nb=2)
+			o=getChildByID(o, ID=-31827, nb=3)
+			o=getChildByID(o, ID=-31827, nb=4)
+			o=getChildByID(o, ID=-31818, nb=5)
+			o=getChildByID(o, ID=-31818, nb=6)
+			o=getChildByID(o, ID=-31817, nb=7)
+			o=getChildByID(o, ID=-31817, nb=8)
+			o=getChildByID(o, ID=-31816, nb=9)
+			o=getChildByID(o, ID=-31816, nb=10)
+			o=getChildByID(o, ID=-31813, nb=11)
+			o=getChildByID(o, ID=-31813, nb=12)
+			o=getChildByID(o, ID=-31811, nb=13)
+			o=getChildByID(o, ID=-31811, nb=14) 
+			o.setFocus()
+	except No version information:
+		pass
 
 def goRemoteList():
 	fg=api.getForegroundObject()
