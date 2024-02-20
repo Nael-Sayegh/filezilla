@@ -15,28 +15,29 @@ addonHandler.initTranslation()
 class AppModule(appModuleHandler.AppModule):
 	@scriptHandler.script(gesture="kb:control+f6",description=_("FileZilla: Switch between local and remote file lists; when not in a list, navigate to the remote file list."),category="FileZilla")
 	def script_switchList(self, gesture):
-		fo = api.getNavigatorObject()
-		if fo.role == controlTypes.Role.LISTITEM:
-			fo=fo.parent
-		if fo.role == controlTypes.Role.LIST and fo.windowClassName == 'SysListView32' and fo.windowControlID == -31811:
-			goRemoteList()
-		elif fo.role == controlTypes.Role.LIST and fo.windowClassName == 'SysListView32' and fo.windowControlID == -31806:
-			goLocalList()
-		else:
-			goRemoteList()
+		try:
+			globalVars.foregroundObject.appModule.productVersion
+			fo = api.getNavigatorObject()
+			if fo.role == controlTypes.Role.LISTITEM:
+				fo=fo.parent
+			if fo.role == controlTypes.Role.LIST and fo.windowClassName == 'SysListView32' and fo.windowControlID == -31811:
+				goRemoteList()
+			elif fo.role == controlTypes.Role.LIST and fo.windowClassName == 'SysListView32' and fo.windowControlID == -31806:
+				goLocalList()
+			else:
+				goRemoteList()
+		except RuntimeError:
+			ui.message(_("Unable to access the list because the FileZilla version is not detected"))
 	
 	@scriptHandler.script(gesture="kb:control+shift+h",description=_("FileZilla: go to the connections history button"),category="FileZilla")
 	def script_clickHistory(self, gesture):
-		#Je récupère l'objet en avant plan
 		fg = api.getForegroundObject()
-		#Je parcours l'arborescence des objets pour arriver à la liste.
 		o = getChildByID(fg, ID = -31832, nb=1)
 		o = getChildByID(o, ID = -31832, nb=2)
 		o = getChildByID(o, ID = -31943, nb=3)
 		o = getChildByID(o, ID = -31943, nb=4)
 		o.setFocus()
 	
-		#Définition du label du bouton de l'historique de connexion en "Historique des connexions"
 	def event_NVDAObject_init(self, obj):
 		if obj.role == controlTypes.Role.BUTTON and obj.windowControlID == -31943:
 			obj.name = _("Connection history")
