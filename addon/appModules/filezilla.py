@@ -13,10 +13,10 @@ import globalVars
 
 addonHandler.initTranslation()
 class AppModule(appModuleHandler.AppModule):
-	try:
-		globalVars.foregroundObject.appModule.productVersion
-		@scriptHandler.script(gesture="kb:control+f6",description=_("FileZilla: Switch between local and remote file lists; when not in a list, navigate to the remote file list."),category="FileZilla")
-		def script_switchList(self, gesture):
+	@scriptHandler.script(gesture="kb:control+f6",description=_("FileZilla: Switch between local and remote file lists; when not in a list, navigate to the remote file list."),category="FileZilla")
+	def script_switchList(self, gesture):
+		try:
+			globalVars.foregroundObject.appModule.productVersion
 			fo = api.getNavigatorObject()
 			if fo.role == controlTypes.Role.LISTITEM:
 				fo=fo.parent
@@ -26,8 +26,8 @@ class AppModule(appModuleHandler.AppModule):
 				goLocalList()
 			else:
 				goRemoteList()
-	except RuntimeError:
-		pass
+		except RuntimeError:
+			ui.message(_("Unable to access the list because the FileZilla version is not detected"))
 	
 	@scriptHandler.script(gesture="kb:control+shift+h",description=_("FileZilla: go to the connections history button"),category="FileZilla")
 	def script_clickHistory(self, gesture):
