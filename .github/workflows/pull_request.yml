@@ -15,7 +15,7 @@ jobs:
           ref: ${{ github.event.pull_request.head.sha }}
           
       - name: Set up Python 3.9
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: 3.9
           
@@ -43,7 +43,7 @@ jobs:
           path: ./*.nvda-addon
           
       - name: comment on pull request
-        uses: actions/github-script@v5
+        uses: actions/github-script@v7
         if: always()
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
