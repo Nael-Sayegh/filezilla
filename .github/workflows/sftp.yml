@@ -1,11 +1,11 @@
-name: scons
+name: Upload file for update
 on: 
   push:
     tags: 
       - '*'
 
 jobs:
-  scons: 
+  sftp: 
     runs-on: ubuntu-latest
     steps:
       - name: Check out source repository
@@ -18,6 +18,8 @@ jobs:
         run: pip install scons
       - name: install markdown
         run: pip install markdown
+      - name: Update packages
+        run: sudo apt-get update
       - name: Install gettext
         run: sudo apt-get install gettext
       - name: Generating Addon
