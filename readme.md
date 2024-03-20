@@ -28,6 +28,10 @@ This module adds the following labels in the software
 
 ## Changes
 
+### Version 2024.03.21
+
+  * Error correction when proposing an update.
+
 ### Version 2024.03.20
 
   * Check if a version of FileZilla is detected; otherwise, an error message is displayed when using Ctrl+F6.
@@ -61,6 +65,6 @@ Copyright ©: 2024 (Nael Sayegh and Nael-Accessvision)
 
 <!-- links section -->
 
-[1]: https://github.com/nael-sayegh/filezilla/releases/download/2024.03.20/filezilla-2024.03.20.nvda-addon
+[1]: https://github.com/nael-sayegh/filezilla/releases/download/2024.03.21/filezilla-2024.03.21.nvda-addon
 
 [2]: https://github.com/nael-sayegh/filezilla
