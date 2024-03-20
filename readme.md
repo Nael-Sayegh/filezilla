@@ -30,7 +30,7 @@ This module adds the following labels in the software
 
 ### Version 2024.03.20
 
-  * * Check if a version of FileZilla is detected; otherwise, an error message is displayed when using Ctrl+F6.
+  * Check if a version of FileZilla is detected; otherwise, an error message is displayed when using Ctrl+F6.
 
 ### Version 2024.01.20
 

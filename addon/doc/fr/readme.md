@@ -29,6 +29,10 @@ Ce module apporte les labels suivants dans le logiciel
   
 ## Changements
 
+### Version 2024.03.20
+
+  * Vérifiez si une version de FileZilla est détectée ; sinon, un message d'erreur s'affiche lorsque vous utilisez Ctrl+F6.
+
 ### Version 2024.01.20
 
   * Ajout d'un bouton "Quoi de neuf" dans le dialogue de mise à jour pour voir les nouvelles fonctionalitées avant de faire la mise à jour
