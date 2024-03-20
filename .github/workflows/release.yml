@@ -59,7 +59,7 @@ jobs:
           files: |
             *.nvda-addon
             *.pot
-          body: changelog.md
+          body_path: changelog.md
       - name: upload the documentation
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
