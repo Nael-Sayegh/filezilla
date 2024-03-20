@@ -58,7 +58,7 @@ Copyright ©: 2023 (Nael Sayegh et Nael-Accessvision)
 
 <!-- links section -->
 
-[1]: https://github.com/nael-sayegh/filezilla/releases/download/2023.12.22/filezilla-2024.01.20.nvda-addon
+[1]: https://github.com/nael-sayegh/filezilla/releases/download/2024.03.20/filezilla-2024.03.20.nvda-addon
 
 [2]: https://github.com/nael-sayegh/filezilla
 
