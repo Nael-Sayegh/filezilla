@@ -11,13 +11,15 @@ from logHandler import log
 import config
 import globalVars
 import ui
+import languageHandler
+
 addonHandler.initTranslation()
 confSpecs = {
 	"nbWeek": "integer(default=60)",
 	"autoUpdate": "boolean(default=True)",
 	"updateEveryStart": "boolean(default=False)",
 }
-config.conf.spec["FileZilla"] = confSpecs
+config.conf.spec["filezilla"] = confSpecs
 time=datetime.datetime.now()
 week= int(time.strftime("%W"))
 baseDir = os.path.dirname(__file__) 
@@ -34,7 +36,6 @@ def updateAvailable():
 def installupdate():
 #	global addon
 	temp=os.environ.get('TEMP')
-	#temp=temp.encode('UTF-8')
 	file=temp + "\\filezilla_" + oversion + ".nvda-addon"
 	url=f"https://module.nael-accessvision.com/addons/addons/filezilla/filezilla-{oversion}.nvda-addon"
 	urllib.request.urlretrieve(url, file)
@@ -53,7 +54,7 @@ def installupdate():
 		prevAddon.requestRemove()
 	addonHandler.installAddonBundle(bundle)
 	os.remove(file)
-	config.conf["FileZilla"]["nbWeek"] = week
+	config.conf["filezilla"]["nbWeek"] = week
 	core.restart()
 
 def verifUpdate(gesture=False):
@@ -76,7 +77,7 @@ def Param(param,message):
 		config.conf[configSectionName][param] = False
 		ui.message(_("%s is disabled.") %(message))
 
-if not globalVars.appArgs.secure and config.conf["FileZilla"]["autoUpdate"] and (config.conf["FileZilla"]["nbWeek"] != week or config.conf["FileZilla"]["updateEveryStart"]):
+if not globalVars.appArgs.secure and config.conf["filezilla"]["autoUpdate"] and (config.conf["filezilla"]["nbWeek"] != week or config.conf["FileZilla"]["updateEveryStart"]):
 	verifUpdate()
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
