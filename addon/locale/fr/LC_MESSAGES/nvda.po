@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 'filezilla' '2023.06.15'\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2024-01-07 16:19+0100\n"
-"PO-Revision-Date: 2024-01-07 16:20+0100\n"
+"POT-Creation-Date: 2024-03-20 08:40+0100\n"
+"PO-Revision-Date: 2024-03-20 08:41+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.4.2\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
 #: addon\globalPlugins\update_filezilla.py:30
@@ -82,31 +82,37 @@ msgstr ""
 "FileZilla: Alterne entre la liste des fichiers distans et locaux; quand on "
 "est sur aucune liste, amène sur la liste des fichiers distants"
 
-#: addon\appModules\filezilla.py:28
+#: addon\appModules\filezilla.py:30
+msgid "Unable to access the list because the FileZilla version is not detected"
+msgstr ""
+"Impossible d'accéder à la liste car la version de FileZilla n'est pas "
+"détectée"
+
+#: addon\appModules\filezilla.py:32
 msgid "FileZilla: go to the connections history button"
 msgstr "Filezilla: Se place sur le bouton historique des connexions"
 
-#: addon\appModules\filezilla.py:42
+#: addon\appModules\filezilla.py:43
 msgid "Connection history"
 msgstr "Historique des connexions"
 
-#: addon\appModules\filezilla.py:44
+#: addon\appModules\filezilla.py:45
 msgid "Search options"
 msgstr "Options de recherche"
 
-#: addon\appModules\filezilla.py:46
+#: addon\appModules\filezilla.py:47
 msgid "Close the search."
 msgstr "Fermer la recherche"
 
-#: addon\appModules\filezilla.py:81
+#: addon\appModules\filezilla.py:82
 msgid "Not found {nb}"
 msgstr "Pas trouvé {nb}"
 
-#: addon\appModules\filezilla.py:145
+#: addon\appModules\filezilla.py:146
 msgid "The list of remote files cannot be found"
 msgstr "La liste des fichiers distants est introuvable."
 
-#: addon\appModules\filezilla.py:166
+#: addon\appModules\filezilla.py:167
 msgid "The list of remote files cannot be found."
 msgstr "La liste des fichiers distants est introuvable."
 
