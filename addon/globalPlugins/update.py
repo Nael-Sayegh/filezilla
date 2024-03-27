@@ -123,5 +123,5 @@ class updateDialog(wx.Dialog):
 		else:
 			os.startfile(url+"en/readme.html")
 
-class globalPlugin(globalPluginHandler.GlobalPlugin):
+class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	pass
