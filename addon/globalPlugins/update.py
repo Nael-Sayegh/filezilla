@@ -12,9 +12,16 @@ import gui
 
 addonHandler.initTranslation()
 
-baseDir = os.path.dirname(__file__) 
-addon = os.path.join(baseDir, "..", "..") 
+
+addon = os.path.join(os.path.dirname(__file__), "..") 
 addonInfos = addonHandler.Addon(addon).manifest
+
+confSpecs = {
+	"nbWeek": "integer(default=60)",
+	"autoUpdate": "boolean(default=True)",
+	"updateEveryStart": "boolean(default=False)",
+}
+config.conf.spec[addonInfos['name']] = confSpecs
 
 time=datetime.datetime.now()
 week= int(time.strftime("%W"))
