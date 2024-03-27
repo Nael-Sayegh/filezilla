@@ -1,3 +1,4 @@
 ## What's new?
 
-  * Check if a version of FileZilla is detected; otherwise, an error message is displayed when using Ctrl+F6.
+  * Improvement of the update system and removal of keyboard shortcuts related to updates
+  * Error correction when proposing an update.

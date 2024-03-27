@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 'filezilla' '2023.06.15'\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2024-03-20 08:40+0100\n"
-"PO-Revision-Date: 2024-03-20 08:41+0100\n"
+"POT-Creation-Date: 2024-03-27 10:42+0100\n"
+"PO-Revision-Date: 2024-03-27 10:43+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -19,12 +19,14 @@ msgstr ""
 "X-Generator: Poedit 3.4.2\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
-#: addon\globalPlugins\update_filezilla.py:30
+#. Translators: title of a dialog box
+#: addon\globalPlugins\update.py:31
 #, python-format
 msgid "Update of %s version %s"
 msgstr "Mise à jour de %s version %s"
 
-#: addon\globalPlugins\update_filezilla.py:31
+#. Translators: message to user to report a new version.
+#: addon\globalPlugins\update.py:33
 #, python-format
 msgid ""
 "%s version %s is available. Would you like to update now? You can view the "
@@ -34,43 +36,23 @@ msgstr ""
 "pouvez voir les changements en cliquant sur le bouton quoi de neuf et "
 "descendre jusqu'à changement."
 
-#: addon\globalPlugins\update_filezilla.py:69
+#. Translators: message to user to report that no update is available.
+#: addon\globalPlugins\update.py:69
 msgid "No update is available."
 msgstr "Aucune mise à jour n'est disponible."
 
-#: addon\globalPlugins\update_filezilla.py:74
-#, python-format
-msgid "%s is enabled."
-msgstr "%s est activée."
-
-#: addon\globalPlugins\update_filezilla.py:77
-#, python-format
-msgid "%s is disabled."
-msgstr "%s est désactivée."
-
-#: addon\globalPlugins\update_filezilla.py:83
-msgid "FileZilla: checks for module updates manually"
-msgstr "FileZilla: rechercher une mise à jour du module manuellement"
-
-#: addon\globalPlugins\update_filezilla.py:87
-msgid "FileZilla: enable/disable automatic update checking"
-msgstr "FileZilla: active/désactive la recherche de mise à jour automatique."
-
-#: addon\globalPlugins\update_filezilla.py:89
-msgid "Automatic update"
-msgstr "La mise à jour automatique"
-
-#. Translators: This is a label of a button appearing
-#: addon\globalPlugins\update_filezilla.py:101
+#. Translators: label of a button
+#: addon\globalPlugins\update.py:88
 msgid "&Yes"
 msgstr "&Oui"
 
-#. Translators: This is a label of a button appearing
-#: addon\globalPlugins\update_filezilla.py:105
+#. Translators: label of a button
+#: addon\globalPlugins\update.py:96
 msgid "&No"
 msgstr "&Non"
 
-#: addon\globalPlugins\update_filezilla.py:107
+#. Translators: label of a button
+#: addon\globalPlugins\update.py:101
 msgid "Wha&t's new"
 msgstr "&Quoi de neuf"
 
@@ -125,14 +107,3 @@ msgid ""
 msgstr ""
 "Ce module apporte des améliorations à Filezilla en ajoutant des raccourcis "
 "et des libellés aux boutons sans nom."
-
-#~ msgid "FileZilla: go to the remote files list"
-#~ msgstr "FileZilla: Se place sur la liste des fichiers distants"
-
-#~ msgid "FileZilla: Go to the remote files list from the local files list"
-#~ msgstr ""
-#~ "FileZilla: Se place sur la liste des fichiers distants depuis la liste "
-#~ "des fichiers locaux"
-
-#~ msgid "FileZilla: Go to the local files list"
-#~ msgstr "FileZilla: Se place sur la liste des fichiers locaux"
