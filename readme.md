@@ -28,6 +28,10 @@ This module adds the following labels in the software
 
 ## Changes
 
+### Version 2024.03.27
+
+  * Improvement of the update system and removal of keyboard shortcuts related to updates.
+
 ### Version 2024.03.21
 
   * Error correction when proposing an update.
@@ -65,6 +69,6 @@ Copyright ©: 2024 (Nael Sayegh and Nael-Accessvision)
 
 <!-- links section -->
 
-[1]: https://github.com/nael-sayegh/filezilla/releases/download/2024.03.21/filezilla-2024.03.21.nvda-addon
+[1]: https://github.com/nael-sayegh/filezilla/releases/download/2024.03.27/filezilla-2024.03.27.nvda-addon
 
 [2]: https://github.com/nael-sayegh/filezilla

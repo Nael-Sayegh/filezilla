@@ -29,6 +29,10 @@ Ce module apporte les labels suivants dans le logiciel
   
 ## Changements
 
+### Version 2024.03.27
+
+  * Amélioration du système de mise à jour et suspression des raccourcis claviers liés aux mise à jours
+
 ### Version 2024.03.21
 
   * Correction d'une erreur lorsque l'on clique sur le bouton quoi de neuf dans le dialogue de mise à jour
@@ -62,7 +66,7 @@ Copyright ©: 2024 (Nael Sayegh et Nael-Accessvision)
 
 <!-- links section -->
 
-[1]: https://github.com/nael-sayegh/filezilla/releases/download/2024.03.21/filezilla-2024.03.21.nvda-addon
+[1]: https://github.com/nael-sayegh/filezilla/releases/download/2024.03.27/filezilla-2024.03.27.nvda-addon
 
 [2]: https://github.com/nael-sayegh/filezilla
 
