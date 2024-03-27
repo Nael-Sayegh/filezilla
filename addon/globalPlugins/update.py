@@ -1,3 +1,4 @@
+import globalPluginHandler
 import os
 import urllib.request
 import datetime
@@ -122,3 +123,5 @@ class updateDialog(wx.Dialog):
 		else:
 			os.startfile(url+"en/readme.html")
 
+class globalPlugin(globalPluginHandler.GlobalPlugin):
+	pass
