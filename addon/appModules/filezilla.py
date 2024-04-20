@@ -20,9 +20,9 @@ class AppModule(appModuleHandler.AppModule):
 			fo = api.getNavigatorObject()
 			if fo.role == controlTypes.Role.LISTITEM:
 				fo=fo.parent
-			if fo.role == controlTypes.Role.LIST and fo.windowClassName == 'SysListView32' and fo.windowControlID == -31811:
+			if fo.role == controlTypes.Role.LIST and fo.windowClassName == 'SysListView32' and (fo.windowControlID == -31811 or fo.windowControlID == -31813):
 				goRemoteList()
-			elif fo.role == controlTypes.Role.LIST and fo.windowClassName == 'SysListView32' and fo.windowControlID == -31806:
+			elif fo.role == controlTypes.Role.LIST and fo.windowClassName == 'SysListView32' and (fo.windowControlID == -31806 or fo.windowControlID == -31808):
 				goLocalList()
 			else:
 				goRemoteList()
@@ -32,14 +32,11 @@ class AppModule(appModuleHandler.AppModule):
 	@scriptHandler.script(gesture="kb:control+shift+h",description=_("FileZilla: go to the connections history button"),category="FileZilla")
 	def script_clickHistory(self, gesture):
 		fg = api.getForegroundObject()
-		o = getChildByID(fg, ID = -31832, nb=1)
-		o = getChildByID(o, ID = -31832, nb=2)
-		o = getChildByID(o, ID = -31943, nb=3)
-		o = getChildByID(o, ID = -31943, nb=4)
+		o = getChildByID(fg, ID = -31944, nb=1)
 		o.setFocus()
 	
 	def event_NVDAObject_init(self, obj):
-		if obj.role == controlTypes.Role.BUTTON and obj.windowControlID == -31943:
+		if obj.role == controlTypes.Role.BUTTON and obj.windowControlID == -31944:
 			obj.name = _("Connection history")
 		if obj.role == controlTypes.Role.BUTTON and obj.windowControlID == -31900:
 			obj.name = _("Search options")
@@ -88,7 +85,10 @@ def getChildByID(o, ID, nb):
 
 def goLocalList():
 	fg=api.getForegroundObject()
-	if int(globalVars.foregroundObject.appModule.productVersion.split(",")[1]) < 65:
+	if int(globalVars.foregroundObject.appModule.productVersion.split(",")[1]) > 67:
+		o=getChildByID(fg, ID=-31813, nb=1)
+		o.setFocus()
+	elif int(globalVars.foregroundObject.appModule.productVersion.split(",")[1]) < 65:
 		o = getChildByID(fg, ID = -31828, nb=1)
 		o = getChildByID(o, ID = -31828, nb=2)
 		o = getChildByID(o, ID = -31827, nb=3)
@@ -125,7 +125,10 @@ def goLocalList():
 
 def goRemoteList():
 	fg=api.getForegroundObject()
-	if int(globalVars.foregroundObject.appModule.productVersion.split(",")[1]) < 65:
+	if int(globalVars.foregroundObject.appModule.productVersion.split(",")[1]) > 67:
+		o = getChildByID(fg, ID = -31808, nb=1)
+		o.setFocus()
+	elif int(globalVars.foregroundObject.appModule.productVersion.split(",")[1]) < 65:
 		o = getChildByID(fg, ID = -31828, nb=1)
 		o = getChildByID(o, ID = -31828, nb=2)
 		o = getChildByID(o, ID = -31827, nb=3)
