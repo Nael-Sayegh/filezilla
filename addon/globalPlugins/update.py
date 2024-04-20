@@ -13,7 +13,7 @@ import gui
 
 addonHandler.initTranslation()
 
-addon = os.path.join(os.path.dirname(__file__), "..") 
+addon = os.path.join(os.path.dirname(__file__), "..")
 addonInfos = addonHandler.Addon(addon).manifest
 
 confSpecs = {
@@ -23,19 +23,23 @@ confSpecs = {
 }
 config.conf.spec[addonInfos['name']] = confSpecs
 
-time=datetime.datetime.now()
-week= int(time.strftime("%W"))
+time = datetime.datetime.now()
+week = int(time.strftime("%W"))
+
 
 def updateAvailable():
 	# Translators: title of a dialog box
-	title = _("Update of %s version %s") %(addonInfos["summary"], oversion)
+	title = _("Update of %s version %s") % (addonInfos["summary"], oversion)
 	# Translators: message to user to report a new version.
-	msg = _("%s version %s is available. Would you like to update now? You can view the changes by clicking on the What's New button and scrolling down to Changes.") %(addonInfos["summary"], oversion)
+	msg = _(
+		"%s version %s is available. Would you like to update now? You can view the changes by clicking on the What's New button and scrolling down to Changes."
+	) % (addonInfos["summary"], oversion)
 	updateDialog(title=title, msg=msg).ShowModal()
 
+
 def installupdate():
-	file=os.environ.get('TEMP') + "\\"+addonInfos["name"] + ".nvda-addon"
-	url=f"https://module.nael-accessvision.com/addons/addons/{addonInfos['name']}/{addonInfos['name']}.nvda-addon"
+	file = os.environ.get('TEMP') + "\\" + addonInfos["name"] + ".nvda-addon"
+	url = f"https://module.nael-accessvision.com/addons/addons/{addonInfos['name']}/{addonInfos['name']}.nvda-addon"
 	urllib.request.urlretrieve(url, file)
 	curAddons = []
 	for addon in addonHandler.getAvailableAddons():
@@ -54,12 +58,17 @@ def installupdate():
 	config.conf[addonInfos["name"]]["nbWeek"] = week
 	core.restart()
 
+
 def verifUpdate(gesture=False):
 	global oversion
 	version = addonInfos["version"]
-	rversion = urllib.request.urlopen("https://module.nael-accessvision.com/addons/addons/"+addonInfos["name"]+"/version.txt")
+	rversion = urllib.request.urlopen(
+		"https://module.nael-accessvision.com/addons/addons/"
+		+ addonInfos["name"]
+		+ "/version.txt"
+	)
 	tversion = rversion.read().decode()
-	oversion=tversion.replace("\n", "")
+	oversion = tversion.replace("\n", "")
 	if version != oversion:
 		wx.CallAfter(updateAvailable)
 	else:
@@ -69,8 +78,17 @@ def verifUpdate(gesture=False):
 				_("No update is available.")
 			)
 
-if not globalVars.appArgs.secure and config.conf[addonInfos["name"]]["autoUpdate"] and (config.conf[addonInfos["name"]]["nbWeek"] != week or config.conf[addonInfos["name"]]["updateEveryStart"]):
+
+if (
+	not globalVars.appArgs.secure
+	and config.conf[addonInfos["name"]]["autoUpdate"]
+	and (
+		config.conf[addonInfos["name"]]["nbWeek"] != week
+		or config.conf[addonInfos["name"]]["updateEveryStart"]
+	)
+):
 	verifUpdate()
+
 
 class updateDialog(wx.Dialog):
 	def __init__(self, parent=None, title=None, msg=None):
@@ -82,29 +100,33 @@ class updateDialog(wx.Dialog):
 		text.SetLabel(msg)
 		bHelper = gui.guiHelper.ButtonHelper(wx.HORIZONTAL)
 		# Translators: This is a label of a button appearing
-		yes = bHelper.addButton(self, 
-			wx.ID_YES, 
+		yes = bHelper.addButton(
+			self,
+			wx.ID_YES,
 			# Translators: label of a button
-			label=_("&Yes")
+			label=_("&Yes"),
 		)
 		yes.Bind(wx.EVT_BUTTON, lambda evt: installupdate())
 		yes.SetFocus()
 		# Translators: This is a label of a button appearing
-		no = bHelper.addButton(self, 
-			wx.ID_NO, 
+		no = bHelper.addButton(
+			self,
+			wx.ID_NO,
 			# Translators: label of a button
-			label=_("&No")
+			label=_("&No"),
 		)
 		no.Bind(wx.EVT_BUTTON, self.onNo)
-		releaseNotes = bHelper.addButton(self, 
+		releaseNotes = bHelper.addButton(
+			self,
 			# Translators: label of a button
-			label=_("Wha&t's new")
+			label=_("Wha&t's new"),
 		)
 		releaseNotes.Bind(wx.EVT_BUTTON, self.onReleaseNotes)
 		sHelper.addDialogDismissButtons(bHelper)
 		self.EscapeId = wx.ID_NO
 		mainSizer.Add(
-			sHelper.sizer, border=gui.guiHelper.BORDER_FOR_DIALOGS, flag=wx.ALL)
+			sHelper.sizer, border=gui.guiHelper.BORDER_FOR_DIALOGS, flag=wx.ALL
+		)
 		mainSizer.Fit(self)
 		self.SetSizer(mainSizer)
 		self.CentreOnScreen()
@@ -114,14 +136,15 @@ class updateDialog(wx.Dialog):
 		self.Destroy()
 
 	def onReleaseNotes(self, evt):
-		url=f"https://module.nael-accessvision.com/addons/addons/{addonInfos['name']}/doc/"
+		url = f"https://module.nael-accessvision.com/addons/addons/{addonInfos['name']}/doc/"
 		remoteLanguage = os.listdir(os.path.join(addon, "locale"))
 		localLanguage = languageHandler.getLanguage()
-		localLanguage= localLanguage.split("_")[0]
+		localLanguage = localLanguage.split("_")[0]
 		if localLanguage in remoteLanguage:
-			os.startfile(url+localLanguage+"/readme.html")
+			os.startfile(url + localLanguage + "/readme.html")
 		else:
-			os.startfile(url+"en/readme.html")
+			os.startfile(url + "en/readme.html")
+
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	pass

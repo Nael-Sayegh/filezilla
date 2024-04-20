@@ -23,7 +23,9 @@ addon_info = {
 	"addon_summary": "FileZilla",
 	# Add-on description
 	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
-	"addon_description": _("""This module improves the FileZilla software by adding shortcuts and labels to unnamed buttons."""),
+	"addon_description": _(
+		"""This module improves the FileZilla software by adding shortcuts and labels to unnamed buttons."""
+	),
 	# version
 	"addon_version": "2024.03.27",
 	# Author(s)
@@ -56,8 +58,7 @@ addon_info = {
 # pythonSources = ["addon/globalPlugins/*.py"]
 # For more information on SCons Glob expressions please take a look at:
 # https://scons.org/doc/production/HTML/scons-user/apd.html
-pythonSources = ["addon/globalPlugins/*.py",
-"addon/appModules/*.py"]
+pythonSources = ["addon/globalPlugins/*.py", "addon/appModules/*.py"]
 
 # Files that contain strings for translation. Usually your python sources
 i18nSources = pythonSources + ["buildVars.py"]
