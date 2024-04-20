@@ -34,8 +34,9 @@ class AppModule(appModuleHandler.AppModule):
 	def script_clickHistory(self, gesture):
 		fg = api.getForegroundObject()
 		o=getChildByID(fg, ID=-31834, nb=1)
-		o=getChildByID(o, ID=-31944, nb=2)
-		o = getChildByID(o, ID = -31944, nb=3)
+		o=getChildByID(o, ID=-31834, nb=2)
+		o=getChildByID(o, ID=-31944, nb=3)
+		o = getChildByID(o, ID = -31944, nb=4)
 		o.setFocus()
 	
 	def event_NVDAObject_init(self, obj):
