@@ -85,7 +85,7 @@ def getChildByID(o, ID, nb):
 
 def goLocalList():
 	fg=api.getForegroundObject()
-	if int(globalVars.foregroundObject.appModule.productVersion.split(",")[1]) > 67:
+	if int(globalVars.foregroundObject.appModule.productVersion.split(",")[1]) >= 67:
 		o=getChildByID(fg, ID=-31813, nb=1)
 		o.setFocus()
 	elif int(globalVars.foregroundObject.appModule.productVersion.split(",")[1]) < 65:
@@ -125,7 +125,7 @@ def goLocalList():
 
 def goRemoteList():
 	fg=api.getForegroundObject()
-	if int(globalVars.foregroundObject.appModule.productVersion.split(",")[1]) > 67:
+	if int(globalVars.foregroundObject.appModule.productVersion.split(",")[1]) >= 67:
 		o = getChildByID(fg, ID = -31808, nb=1)
 		o.setFocus()
 	elif int(globalVars.foregroundObject.appModule.productVersion.split(",")[1]) < 65:
