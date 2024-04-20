@@ -21,6 +21,7 @@ class AppModule(appModuleHandler.AppModule):
 			if fo.role == controlTypes.Role.LISTITEM:
 				fo=fo.parent
 			if fo.role == controlTypes.Role.LIST and fo.windowClassName == 'SysListView32' and (fo.windowControlID == -31811 or fo.windowControlID == -31813):
+				log.info("vérification passée")
 				goRemoteList()
 			elif fo.role == controlTypes.Role.LIST and fo.windowClassName == 'SysListView32' and (fo.windowControlID == -31806 or fo.windowControlID == -31808):
 				goLocalList()
@@ -86,6 +87,7 @@ def getChildByID(o, ID, nb):
 def goLocalList():
 	fg=api.getForegroundObject()
 	if int(globalVars.foregroundObject.appModule.productVersion.split(",")[1]) >= 67:
+		log.info("Version 67")
 		o=getChildByID(fg, ID=-31813, nb=1)
 		o.setFocus()
 	elif int(globalVars.foregroundObject.appModule.productVersion.split(",")[1]) < 65:
@@ -126,6 +128,7 @@ def goLocalList():
 def goRemoteList():
 	fg=api.getForegroundObject()
 	if int(globalVars.foregroundObject.appModule.productVersion.split(",")[1]) >= 67:
+		log.info("Version 67")
 		o = getChildByID(fg, ID = -31808, nb=1)
 		o.setFocus()
 	elif int(globalVars.foregroundObject.appModule.productVersion.split(",")[1]) < 65:
