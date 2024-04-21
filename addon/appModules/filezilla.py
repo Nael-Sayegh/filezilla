@@ -6,7 +6,8 @@ import ui
 import scriptHandler
 import addonHandler
 from NVDAObjects.IAccessible import IAccessible
-from logHandler import log
+
+# from logHandler import log
 import globalVars
 
 addonHandler.initTranslation()
@@ -31,7 +32,6 @@ class AppModule(appModuleHandler.AppModule):
 				and fo.windowClassName == 'SysListView32'
 				and (fo.windowControlID == -31811 or fo.windowControlID == -31813)
 			):
-				log.info("vérification passée")
 				goRemoteList()
 			elif (
 				fo.role == controlTypes.Role.LIST
@@ -196,7 +196,6 @@ def goLocalList():
 def goRemoteList():
 	fg = api.getForegroundObject()
 	if int(globalVars.foregroundObject.appModule.productVersion.split(",")[1]) >= 67:
-		log.info("Version 67")
 		o = getChildByID(fg, ID=-31830, nb=1)
 		o = getChildByID(o, ID=-31830, nb=2)
 		o = getChildByID(o, ID=-31829, nb=3)
