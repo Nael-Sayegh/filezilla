@@ -77,9 +77,13 @@ class AppModule(appModuleHandler.AppModule):
 			obj.windowControlID == -31944 or obj.windowControlID == -31943
 		):
 			obj.name = _("Connection history")
-		if obj.role == controlTypes.Role.BUTTON and obj.windowControlID == -31900:
+		if obj.role == controlTypes.Role.BUTTON and (
+			obj.windowControlID == -31900 or obj.windowControlID == -31902
+		):
 			obj.name = _("Search options")
-		if obj.role == controlTypes.Role.BUTTON and obj.windowControlID == -31899:
+		if obj.role == controlTypes.Role.BUTTON and (
+			obj.windowControlID == -31899 or obj.windowControlID == -31901
+		):
 			obj.name = _("Close the search.")
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
