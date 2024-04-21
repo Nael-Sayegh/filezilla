@@ -55,14 +55,27 @@ class AppModule(appModuleHandler.AppModule):
 	)
 	def script_clickHistory(self, gesture):
 		fg = api.getForegroundObject()
-		o = getChildByID(fg, ID=-31834, nb=1)
-		o = getChildByID(o, ID=-31834, nb=2)
-		o = getChildByID(o, ID=-31944, nb=3)
-		o = getChildByID(o, ID=-31944, nb=4)
+		if (
+			int(globalVars.foregroundObject.appModule.productVersion.split(",")[1])
+			>= 67
+		):
+			o = getChildByID(fg, ID=-31834, nb=1)
+			o = getChildByID(o, ID=-31834, nb=2)
+			o = getChildByID(o, ID=-31944, nb=3)
+			o = getChildByID(o, ID=-31944, nb=4)
+		elif (
+			int(globalVars.foregroundObject.appModule.productVersion.split(",")[1]) < 65
+		):
+			o = getChildByID(fg, ID=-31832, nb=1)
+			o = getChildByID(o, ID=-31832, nb=2)
+			o = getChildByID(o, ID=-31943, nb=3)
+			o = getChildByID(o, ID=-31943, nb=4)
 		o.setFocus()
 
 	def event_NVDAObject_init(self, obj):
-		if obj.role == controlTypes.Role.BUTTON and obj.windowControlID == -31944:
+		if obj.role == controlTypes.Role.BUTTON and (
+			obj.windowControlID == -31944 or obj.windowControlID == -31943
+		):
 			obj.name = _("Connection history")
 		if obj.role == controlTypes.Role.BUTTON and obj.windowControlID == -31900:
 			obj.name = _("Search options")
