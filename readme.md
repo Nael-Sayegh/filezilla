@@ -28,6 +28,10 @@ This module adds the following labels in the software
 
 ## Changes
 
+### Version 2025.01.01
+
+  * Adding compatibility with FileZilla 67 and 68
+
 ### Version 2024.03.27
 
   * Improvement of the update system and removal of keyboard shortcuts related to updates.

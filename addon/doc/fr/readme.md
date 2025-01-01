@@ -29,6 +29,10 @@ Ce module apporte les labels suivants dans le logiciel
   
 ## Changements
 
+### Version 2025.01.01
+
+  * Ajout de la compatibilité de FileZilla 67 et 68
+
 ### Version 2024.03.27
 
   * Amélioration du système de mise à jour et suspression des raccourcis claviers liés aux mise à jours

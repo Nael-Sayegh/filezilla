@@ -27,7 +27,7 @@ addon_info = {
 		"""This module improves the FileZilla software by adding shortcuts and labels to unnamed buttons."""
 	),
 	# version
-	"addon_version": "2024.03.27",
+	"addon_version": "2025.01.01",
 	# Author(s)
 	"addon_author": "Nael Sayegh <infos@nael-accessvision.com>",
 	# URL for the add-on documentation support
