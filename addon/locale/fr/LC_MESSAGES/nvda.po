@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: 'filezilla' '2023.06.15'\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
 "POT-Creation-Date: 2024-03-27 10:42+0100\n"
-"PO-Revision-Date: 2024-03-27 10:43+0100\n"
+"PO-Revision-Date: 2025-01-08 14:04+0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.5\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
 #. Translators: title of a dialog box
@@ -62,7 +62,7 @@ msgid ""
 "navigate to the remote file list."
 msgstr ""
 "FileZilla: Alterne entre la liste des fichiers distans et locaux; quand on "
-"est sur aucune liste, amène sur la liste des fichiers distants"
+"est sur aucune liste, amène sur la liste des fichiers distants."
 
 #: addon\appModules\filezilla.py:30
 msgid "Unable to access the list because the FileZilla version is not detected"
@@ -84,7 +84,7 @@ msgstr "Options de recherche"
 
 #: addon\appModules\filezilla.py:47
 msgid "Close the search."
-msgstr "Fermer la recherche"
+msgstr "Fermer la recherche."
 
 #: addon\appModules\filezilla.py:82
 msgid "Not found {nb}"
