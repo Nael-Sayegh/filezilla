@@ -86,48 +86,6 @@ class AppModule(appModuleHandler.AppModule):
 		):
 			obj.name = _("Close the search.")
 
-	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
-		if (
-			obj.windowClassName == 'RICHEDIT50W'
-			and obj.windowControlID == -31819
-			and obj.role == controlTypes.Role.EDITABLETEXT
-		):
-			clsList.insert(0, StatusText)
-
-
-class StatusText(IAccessible):
-	@scriptHandler.script(gesture="kb:tab")
-	def script_nextAfterText(self, gesture):
-		obj = api.getNavigatorObject()
-		obj = obj.parent.parent.parent.previous
-		if (
-			obj.role == controlTypes.Role.WINDOW
-			and obj.windowClassName == 'wxWindowNR'
-			and obj.windowControlID == -31827
-		):
-			obj = obj.firstChild.firstChild.next
-		if obj.role == controlTypes.Role.WINDOW and obj.windowControlID == -31818:
-			obj = obj.firstChild.firstChild.firstChild.firstChild.firstChild.firstChild.firstChild.firstChild.next
-		if obj.role == controlTypes.Role.WINDOW and obj.windowControlID == -31790:
-			obj = obj.firstChild.firstChild.firstChild.firstChild.firstChild
-		if (
-			obj.role == controlTypes.Role.EDITABLETEXT
-			and obj.windowClassName == 'Edit'
-			and obj.windowControlID == 1001
-		):
-			obj.setFocus()
-
-	@scriptHandler.script(gesture="kb:shift+tab")
-	def script_previousText(self, gesture):
-		# Je récupère l'objet en avant plan
-		fg = api.getForegroundObject()
-		# Je parcours l'arborescence des objets pour arriver à la liste.
-		o = getChildByID(fg, ID=-31832, nb=1)
-		o = getChildByID(o, ID=-31832, nb=2)
-		o = getChildByID(o, ID=-31943, nb=3)
-		o = getChildByID(o, ID=-31943, nb=4)
-		o.setFocus()
-
 
 def getChildByID(o, ID, nb):
 	o = o.firstChild
@@ -195,62 +153,52 @@ def goLocalList():
 
 def goRemoteList():
 	fg = api.getForegroundObject()
-	if int(globalVars.foregroundObject.appModule.productVersion.split(",")[1]) >= 67:
-		o = getChildByID(fg, ID=-31830, nb=1)
-		o = getChildByID(o, ID=-31830, nb=2)
-		o = getChildByID(o, ID=-31829, nb=3)
-		o = getChildByID(o, ID=-31829, nb=4)
-		o = getChildByID(o, ID=-31820, nb=5)
-		o = getChildByID(o, ID=-31820, nb=6)
-		o = getChildByID(o, ID=-31819, nb=7)
-		o = getChildByID(o, ID=-31819, nb=8)
-		o = getChildByID(o, ID=-31817, nb=9)
-		o = getChildByID(o, ID=-31817, nb=10)
-		o = getChildByID(o, ID=-31810, nb=11)
-		o = getChildByID(o, ID=-31810, nb=12)
-		o = getChildByID(o, ID=-31808, nb=13)
-		o = getChildByID(o, ID=-31808, nb=14)
-		o.setFocus()
-	elif int(globalVars.foregroundObject.appModule.productVersion.split(",")[1]) < 65:
-		o = getChildByID(fg, ID=-31828, nb=1)
-		o = getChildByID(o, ID=-31828, nb=2)
-		o = getChildByID(o, ID=-31827, nb=3)
-		o = getChildByID(o, ID=-31827, nb=4)
-		o = getChildByID(o, ID=-31817, nb=5)
-		o = getChildByID(o, ID=-31817, nb=6)
-		o = getChildByID(o, ID=-31816, nb=7)
-		o = getChildByID(o, ID=-31816, nb=8)
-		o = getChildByID(o, ID=-31814, nb=9)
-		o = getChildByID(o, ID=-31814, nb=10)
-		o = getChildByID(o, ID=-31807, nb=11)
-		o = getChildByID(o, ID=-31807, nb=12)
-		o = getChildByID(o, ID=-31805, nb=13)
-		o = getChildByID(o, ID=-31805, nb=14)
-		# Je vérifie si l'objet dans la liste qui indique que l'on est pas connecté est là
-		contentList = getChildByID(o, ID=-31804, nb=15)
-		if contentList:
-			ui.message(_("The list of remote files cannot be found"))
-		# Sinon on y place le focus
-		else:
-			o.setFocus()
+	try:
+		if (
+			int(globalVars.foregroundObject.appModule.productVersion.split(",")[1])
+			>= 67
+		):
+			o = getChildByID(fg, ID=-31830, nb=1)
+			o = getChildByID(o, ID=-31830, nb=2)
+			o = getChildByID(o, ID=-31829, nb=3)
+			o = getChildByID(o, ID=-31829, nb=4)
+			o = getChildByID(o, ID=-31820, nb=5)
+			o = getChildByID(o, ID=-31820, nb=6)
+			o = getChildByID(o, ID=-31819, nb=7)
+			o = getChildByID(o, ID=-31819, nb=8)
+			o = getChildByID(o, ID=-31817, nb=9)
+			o = getChildByID(o, ID=-31817, nb=10)
+			o = getChildByID(o, ID=-31810, nb=11)
+			o = getChildByID(o, ID=-31810, nb=12)
+			o = getChildByID(o, ID=-31808, nb=13)
+			o = getChildByID(o, ID=-31808, nb=14)
+			id = -31807
+		elif (
+			int(globalVars.foregroundObject.appModule.productVersion.split(",")[1]) < 65
+		):
+			o = getChildByID(fg, ID=-31828, nb=1)
+			o = getChildByID(o, ID=-31828, nb=2)
+			o = getChildByID(o, ID=-31827, nb=3)
+			o = getChildByID(o, ID=-31827, nb=4)
+			o = getChildByID(o, ID=-31817, nb=5)
+			o = getChildByID(o, ID=-31817, nb=6)
+			o = getChildByID(o, ID=-31816, nb=7)
+			o = getChildByID(o, ID=-31816, nb=8)
+			o = getChildByID(o, ID=-31814, nb=9)
+			o = getChildByID(o, ID=-31814, nb=10)
+			o = getChildByID(o, ID=-31807, nb=11)
+			o = getChildByID(o, ID=-31807, nb=12)
+			o = getChildByID(o, ID=-31805, nb=13)
+			o = getChildByID(o, ID=-31805, nb=14)
+			id = "-31804"
+	except:
+		ui.message(
+			_("Unable to access the list because the FileZilla version is not detected")
+		)
+	# Je vérifie si l'objet dans la liste qui indique que l'on est pas connecté est là
+	contentList = getChildByID(o, ID=id, nb=15)
+	if contentList:
+		ui.message(_("The list of remote files cannot be found"))
+	# Sinon on y place le focus
 	else:
-		o = getChildByID(fg, ID=-31828, nb=1)
-		o = getChildByID(o, ID=-31828, nb=2)
-		o = getChildByID(o, ID=-31827, nb=3)
-		o = getChildByID(o, ID=-31827, nb=4)
-		o = getChildByID(o, ID=-31818, nb=5)
-		o = getChildByID(o, ID=-31818, nb=6)
-		o = getChildByID(o, ID=-31817, nb=7)
-		o = getChildByID(o, ID=-31817, nb=8)
-		o = getChildByID(o, ID=-31815, nb=9)
-		o = getChildByID(o, ID=-31815, nb=10)
-		o = getChildByID(o, ID=-31808, nb=11)
-		o = getChildByID(o, ID=-31808, nb=12)
-		o = getChildByID(o, ID=-31806, nb=13)
-		o = getChildByID(o, ID=-31806, nb=14)
-		contentList = o.firstChild.windowClassName
-		if contentList == 'SysHeader32':
-			ui.message(_("The list of remote files cannot be found."))
-		# Sinon on y place le focus
-		else:
-			o.setFocus()
+		o.setFocus()
