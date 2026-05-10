@@ -17,8 +17,6 @@ raccourcis clavier ainsi que des labels manquants sur des boutons.
   * ctrl+shift+h: Se place sur le bouton historiique des connexions
   * CTRL+f6: Alterne entre la liste des fichiers distants et locaux; quand vous n'êtes pas positionné sur une liste, vous place sur la liste des fichiers distants
   * nvda+ctrl+alt+F: Rechercher une mise à jour du module manuellement (fonctionne hors du logiciel FileZilla)
-  * nvda+ctrl+alt+shift+F: Active/désactive la recherche de mise à jour automatique (fonctionne hors du logiciel FileZilla)
-
 ## Labels
 
 Ce module apporte les labels suivants dans le logiciel
@@ -28,6 +26,12 @@ Ce module apporte les labels suivants dans le logiciel
   * Ajout du label fermer la recherche dans la zone des fichiers distants.
   
 ## Changements
+
+### Version 2026.05.10
+
+  * Ajout de la compatibilité avec NVDA 2026.1
+  * Ajout de la compatibilité avec FileZilla 3.70
+  * Mise à jour de la documentation
 
 ### Version 2025.01.01
 
@@ -66,11 +70,11 @@ Ce module apporte les labels suivants dans le logiciel
 ### Version 2023.06.17
   * Première version
 
-Copyright ©: 2024 (Nael Sayegh et Nael-Accessvision)
+Copyright ©: 2026 (Nael Sayegh et Nael-Accessvision)
 
 <!-- links section -->
 
-[1]: https://github.com/nael-sayegh/filezilla/releases/download/2024.03.27/filezilla-2024.03.27.nvda-addon
+[1]: https://www.blog.nael-accessvision.com/r.php?m=0&p=filezilla
 
 [2]: https://github.com/nael-sayegh/filezilla
 

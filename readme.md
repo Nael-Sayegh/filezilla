@@ -15,8 +15,6 @@ This module brings improvements to the FileZilla software by adding keyboard sho
 
   * ctrl+shift+h: Moves to the connection history button
   * CTRL+f6: Switches between the remote and local file lists; when not focused on a list, it moves to the remote file list
-  * nvda+ctrl+alt+F: Manually checks for module updates (works outside of FileZilla)
-  * nvda+ctrl+alt+shift+F: Enables/disables automatic update checking (works outside of FileZilla)
 
 ## Labels
 
@@ -27,6 +25,12 @@ This module adds the following labels in the software
   * Adds the Close Search label in the remote file field.
 
 ## Changes
+
+### Version 2026.05.10
+
+  * Added compatibility with NVDA 2026.1
+  * Added compatibility with FileZilla 3.70
+  * Updated documentation
 
 ### Version 2025.01.01
 
@@ -69,10 +73,10 @@ This module adds the following labels in the software
 ### Version 2023.06.17
   * First version
 
-Copyright ©: 2024 (Nael Sayegh and Nael-Accessvision)
+Copyright ©: 2026 (Nael Sayegh and Nael-Accessvision)
 
 <!-- links section -->
 
-[1]: https://github.com/nael-sayegh/filezilla/releases/download/2024.03.27/filezilla-2024.03.27.nvda-addon
+[1]: https://www.blog.nael-accessvision.com/r.php?m=0&p=filezilla
 
 [2]: https://github.com/nael-sayegh/filezilla
