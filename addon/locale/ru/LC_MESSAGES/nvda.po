@@ -1,0 +1,121 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: FileZilla\n"
+"POT-Creation-Date: 2025-01-08 14:19+0500\n"
+"PO-Revision-Date: 2025-01-08 14:25+0500\n"
+"Last-Translator: nvda.ru\n"
+"Language-Team: Danil Kostenkov and nvda.ru project\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 3.5\n"
+"X-Poedit-Basepath: ../../../..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: addon/appModules\n"
+"X-Poedit-SearchPath-1: addon/globalPlugins\n"
+"X-Poedit-SearchPath-2: .\n"
+
+#: addon/appModules/filezilla.py:20
+msgid ""
+"FileZilla: Switch between local and remote file lists; when not in a list, "
+"navigate to the remote file list."
+msgstr ""
+"FileZilla: переключение между локальным и удалённым списками файлов; при "
+"отсутствии в списке - переход к списку удалённых файлов."
+
+#: addon/appModules/filezilla.py:47
+msgid "Unable to access the list because the FileZilla version is not detected"
+msgstr ""
+"Невозможно получить доступ к списку, поскольку версия FileZilla не обнаружена"
+
+#: addon/appModules/filezilla.py:53
+msgid "FileZilla: go to the connections history button"
+msgstr "FileZilla: перейти к кнопке \"История подключений\""
+
+#: addon/appModules/filezilla.py:79
+msgid "Connection history"
+msgstr "История подключений"
+
+#: addon/appModules/filezilla.py:83
+msgid "Search options"
+msgstr "Параметры поиска"
+
+#: addon/appModules/filezilla.py:87
+msgid "Close the search."
+msgstr "Закрыть поиск."
+
+#: addon/appModules/filezilla.py:135
+#, python-brace-format
+msgid "Not found {nb}"
+msgstr "Не найдено {nb}"
+
+#: addon/appModules/filezilla.py:232
+msgid "The list of remote files cannot be found"
+msgstr "Список удалённых файлов не найден"
+
+#: addon/appModules/filezilla.py:253
+msgid "The list of remote files cannot be found."
+msgstr "Список удалённых файлов не найден."
+
+#: addon/globalPlugins/update.py:32
+#, python-format
+msgid "Update of %s version %s"
+msgstr "Обновление %s версии %s"
+
+#: addon/globalPlugins/update.py:35
+#, python-format
+msgid ""
+"%s version %s is available. Would you like to update now? You can view the "
+"changes by clicking on the What's New button and scrolling down to Changes."
+msgstr ""
+"Доступно %s версии %s. Хотите обновить сейчас? Вы можете просмотреть "
+"изменения, нажав кнопку «Что нового» и прокрутив вниз до пункта «Изменения»."
+
+#: addon/globalPlugins/update.py:78
+msgid "No update is available."
+msgstr "Обновление недоступно."
+
+#: addon/globalPlugins/update.py:107
+msgid "&Yes"
+msgstr "&Да"
+
+#: addon/globalPlugins/update.py:116
+msgid "&No"
+msgstr "&Нет"
+
+#: addon/globalPlugins/update.py:122
+msgid "Wha&t's new"
+msgstr "&Что нового"
+
+#: buildVars.py:27
+msgid ""
+"This module improves the FileZilla software by adding shortcuts and labels "
+"to unnamed buttons."
+msgstr ""
+"Это дополнение улучшает доступность файлового менеджера File Zilla. "
+"Дополнение добавляет клавиатурные команды и метки к неподписанным кнопкам."
+
+#~ msgid "%s is enabled."
+#~ msgstr "%s включен."
+
+#~ msgid "%s is disabled."
+#~ msgstr "%s отключен."
+
+#~ msgid "FileZilla: checks for module updates manually"
+#~ msgstr "FileZilla: проверяет обновления модулей вручную"
+
+#~ msgid "FileZilla: enable/disable automatic update checking"
+#~ msgstr "FileZilla: включение/выключение автоматической проверки обновлений"
+
+#~ msgid "Automatic update"
+#~ msgstr "Автоматическое обновление"
+
+#~ msgid "FileZilla: go to the remote files list"
+#~ msgstr "FileZilla: перейти к списку удаленных файлов"
+
+#~ msgid "FileZilla: Go to the remote files list from the local files list"
+#~ msgstr ""
+#~ "FileZilla: Переход к списку удаленных файлов из списка локальных файлов"
